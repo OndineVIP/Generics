@@ -1,19 +1,21 @@
-import static org.junit.jupiter.api.Assertions.*;
+package ru.netology.avia;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+
 class AviaSoulsTest {
+
     AviaSouls aviaSouls = new AviaSouls();
     TicketTimeComparator timeComparator = new TicketTimeComparator();
 
-    Ticket ticket1 = new Ticket("Saint-Petersburg", "Toronto", 63_000, 13_00, 20_00);
-    Ticket ticket2 = new Ticket("Saint-Petersburg", "Toronto", 52_000, 14_00, 24_00);
-    Ticket ticket3 = new Ticket("Saint-Petersburg", "Toronto", 82_000, 3_00, 19_00);
-    Ticket ticket4 = new Ticket("Saint-Petersburg", "Toronto", 159_000, 4_00, 23_00);
-    Ticket ticket5 = new Ticket("Saint-Petersburg", "Toronto", 63_000, 16_00, 23_00);
-    Ticket ticket6 = new Ticket("Moscow", "Paris", 37_000, 12_00, 19_30);
+    Ticket ticket1 = new Ticket("Москва", "Минск", 13_000, 13_00, 14_00);
+    Ticket ticket2 = new Ticket("Москва", "Минск", 12_000, 14_00, 15_00);
+    Ticket ticket3 = new Ticket("Москва", "Минск", 14_000, 3_00, 4_00);
+    Ticket ticket4 = new Ticket("Москва", "Минск", 9_000, 8_00, 10_00);
+    Ticket ticket5 = new Ticket("Москва", "Минск", 3_000, 11_00, 15_00);
+    Ticket ticket6 = new Ticket("Москва", "Минск", 17_000, 12_00, 14_30);
 
     @Test
     void compareToIfLess() {
@@ -210,5 +212,4 @@ class AviaSoulsTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
-
 }

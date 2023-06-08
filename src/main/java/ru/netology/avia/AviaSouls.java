@@ -1,7 +1,10 @@
+package ru.netology.avia;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
 public class AviaSouls {
+
     private Ticket[] tickets = new Ticket[0];
 
     /**
